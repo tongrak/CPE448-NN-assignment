@@ -40,7 +40,7 @@ def printStat(name:str, attrL:list):
     print("number of unique val:", len(set(tempCopy)))
     print("min:", tempCopy[0])
     print("max:", tempCopy[len(attrL)-1])
-    print("median:", find_median(tempCopy))
+    # print("median:", find_median(tempCopy))
     print("Q1:", qV[0])
     print("mean:", f'{(sum(fLi)/len(tempCopy)):,.2f}')
     print("Q3:", qV[1])
@@ -49,9 +49,13 @@ def printStat(name:str, attrL:list):
 # show
 seqLiCop = dataMatr[0].copy()
 print("number of unique seq name: ", len(set(seqLiCop)))
+print();
 
-i = 1
-printStat(attrNameList[i-1], dataMatr[i])
+
+for i in range(1,8):
+# i = 1
+    printStat(attrNameList[i-1], dataMatr[i])
+    print();
 
 clasLiCop = dataMatr[8].copy()
 print("number of unique classes: ",len(set(clasLiCop)))
